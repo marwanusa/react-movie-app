@@ -14,8 +14,8 @@ A React-based movie watchlist app where users can add movies to their watchlist 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/movie-watchlist-app.git
-cd movie-watchlist-app
+git clone https://github.com/marwanusa/react-movie-app.git
+cd react-movie-app
 
 # Install dependencies
 npm install
