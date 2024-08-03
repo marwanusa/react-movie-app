@@ -7,7 +7,7 @@ const Add = () => {
 
   useEffect(() => {
     if (movieName.trim()) {  
-      fetch(`http://www.omdbapi.com/?s=${movieName}&apikey=74a4691c`)
+      fetch(`https://www.omdbapi.com/?s=${movieName}&apikey=74a4691c`)
         .then((res) => {
           if (!res.ok) {
             throw new Error('Network response was not ok');
