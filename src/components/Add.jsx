@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import "./Add.css";
-import axios from "axios";
 import MovieCard from "./MovieCard";
 const Add = () => {
   const [movieName, setMovieName] = useState("");
   const [response, setResponse] = useState([]);
 
   useEffect(() => {
-    if (movieName.trim()) { 
-      axios
-        .get(`http://www.omdbapi.com/?s=${movieName}&apikey=74a4691c`)
-        .then((response) => setResponse(response.data.Search || []))
-        .catch((error) => console.error(error));
+    if (movieName.trim()) {  
+      fetch(`http://www.omdbapi.com/?s=${movieName}&apikey=74a4691c`)
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return res.json();
+        })
+        .then((data) => setResponse(data.Search || []))
+        .catch((error) => console.error('Fetch error:', error));
     }
   }, [movieName]);
   return (
