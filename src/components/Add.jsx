@@ -5,14 +5,9 @@ import MovieCard from "./MovieCard";
 const Add = () => {
   const [movieName, setMovieName] = useState("");
   const [response, setResponse] = useState([]);
-  // useEffect(()=>{
-  //   axios
-  //     .get(`http://www.omdbapi.com/?s=${movieName}&apikey=74a4691c`)
-  //     .then((response) => setResponse(response.data.Search || []))
-  //     .catch((error) => console.error(error));
-  // },[movieName])
+
   useEffect(() => {
-    if (movieName.trim()) {  // To prevent making an API call when the input is empty
+    if (movieName.trim()) { 
       axios
         .get(`http://www.omdbapi.com/?s=${movieName}&apikey=74a4691c`)
         .then((response) => setResponse(response.data.Search || []))
