@@ -1,0 +1,29 @@
+.add {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+}
+.add input {
+    width: 40%;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #032541;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+@media(max-width:518px){
+    .add input{
+        height: 20px;
+    }
+}
+
+.add input:focus {
+    background-color: #043d61;
+    box-shadow: 0 0 5px rgba(3, 37, 65, 0.5);
+    outline: none;
+}

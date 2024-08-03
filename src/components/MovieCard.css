@@ -1,0 +1,63 @@
+.MovieCard{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 500px;
+
+}
+.MovieCard .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+.MovieCard .img img{
+    width: 100px;
+    border-radius: 10px;
+}
+.MovieCard .info .btns {
+    display: flex;
+    gap: 5px;
+}
+@media (max-width: 518px) {
+    .MovieCard .img img {
+      width: 60px;
+      border-radius: 10px;
+    }
+    .MovieCard{
+        width: 400px;
+        gap: 0px;
+    }
+    .MovieCard .info h3{
+        font-size: 15px;
+    }
+    .MovieCard .info .btns Button {
+        width: 100px;
+        height: 30px;
+        font-size: 11px; 
+        padding: 0px 10px; 
+        line-height: 1.2;  
+    }
+  }
+  @media (max-width: 480px) {
+    .MovieCard .img img {
+        width: 50px;
+        border-radius: 8px;
+    }
+    .MovieCard {
+        width: 350px;
+    }
+    .MovieCard .info h3 {
+        font-size: 14px;
+    }
+    .MovieCard .info p {
+        font-size: 10px;
+    }
+    .MovieCard .info .btns Button {
+        width: 80px;         
+        height: 25px;        
+        font-size: 10px;    
+        padding: 0px 8px;    
+        line-height: 1.2;    
+    }
+}
